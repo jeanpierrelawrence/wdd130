@@ -2,7 +2,7 @@
     --primary-color: #000000;
     --secondary-color: #ffffff;
     --accent-one: #5100EB;
-    --accent-two: #EB3700;
+    --accent-two: #d4e800;
 
     --header: Helvetica, sans-serif;
     --body: Arial, serif;
@@ -26,8 +26,7 @@ footer {
     margin: 0 auto;
 }
 
-h1,
-h2 {
+h1 {
     font-family: var(--header);
     color: var(--accent-two);
 }
@@ -39,7 +38,7 @@ article {
     padding: 8px;
 }
 
-.social-media a {
+.socialmedia a {
     text-decoration: none;
 }
 
@@ -77,4 +76,20 @@ article {
 .hero article img {
     float: right;
     width: 125px;
+}
+
+h2 {
+    width: 100%;
+    height: auto;
+    background: var(--accent-two);
+    padding-block: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--accent-one);
+    color: var(--secondary-color);
 }
