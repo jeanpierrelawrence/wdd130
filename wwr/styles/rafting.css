@@ -128,6 +128,14 @@ article {
 .hero article img {
     float: right;
     width: 125px;
+    height: auto;
+}
+
+.hero article h2 {
+    font-weight: normal;
+    font-size: inherit;
+    text-transform: none;
+    background: none;
 }
 
 h2 {
@@ -137,13 +145,6 @@ h2 {
     padding-block: 15px;
     text-align: center;
     text-transform: uppercase;
-}
-
-footer {
-    width: 100%;
-    height: auto;
-    background-color: var(--accent-one);
-    color: var(--secondary-color);
 }
 
 /* HISTORY */
@@ -210,7 +211,11 @@ footer {
 /* FOOTER */
 
 footer {
+    width: 100%;
+    height: auto;
     display: flex;
+    background-color: var(--accent-one);
+    color: var(--secondary-color);
     align-items: center;
     text-align: center;
     padding: 2em;
