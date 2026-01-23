@@ -26,6 +26,58 @@ footer {
     margin: 0 auto;
 }
 
+/* HEADER SECTION */
+
+header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    padding-block: 2em;
+}
+
+header nav {
+    grid-column: span 3/6;
+    place-content: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-one);
+
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-one);
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* MAIN SECTION */
+
 h1 {
     font-family: var(--header);
     color: var(--accent-two);
@@ -92,4 +144,90 @@ footer {
     height: auto;
     background-color: var(--accent-one);
     color: var(--secondary-color);
+}
+
+/* HISTORY */
+
+.history {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.history h2 {
+    grid-column: 1/6;
+}
+
+.history p {
+    grid-column: 1/3;
+}
+
+.history p:last-of-type {
+    grid-column: 4/6;
+}
+
+.history img {
+    grid-column: 3 / 4;
+    width: 100%;
+    height: auto;
+}
+
+/* ADVENTURES */
+
+.adventure {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.adventure h2 {
+    grid-column: 1 / 6;
+    text-align: center;
+}
+
+.adventure figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.adventure figure img:hover {
+    transform: scale(1.05);
+}
+
+.adventure figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+}
+
+footer p {
+    flex: 1;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+footer img {
+    width: 2rem;
 }
