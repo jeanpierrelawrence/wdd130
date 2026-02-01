@@ -40,7 +40,7 @@
         <section class="contact">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8170.291027053155!2d-116.20459405613379!3d43.61415970120688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aef8fb5515352f%3A0xae1a5141c878029f!2sMain%20Aly%20St%2C%20Boise%2C%20ID%2083702%2C%20USA!5e0!3m2!1sen!2sza!4v1769964791608!5m2!1sen!2sza"
-              width="400" height="300" allowfullscreen="" loading="lazy"
+              allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
             <form>
                 <label for="name">Your name</label>
@@ -48,25 +48,33 @@
 
                 <label for="email">Your email</label>
                 <input type="email" id="email" name="email">
+
                 <fieldset>
                     <legend>Purpose of Message</legend>
-                    <input type="radio" id="purpose1" name="purpose" value="general">
-                    <label for="purpose1">General Inquiry</label>
-
-                    <input type="radio" id="purpose2" name="purpose" value="reservation">
-                    <label for="purpose2">Reservation Question</label>
-
-                    <input type="radio" id="purpose3" name="purpose" value="suggestion">
-                    <label for="purpose3">Website Suggestion</label>
+                    <div class="radio-item">
+                        <input type="radio" id="purpose1" name="purpose" value="general">
+                        <label for="purpose1">General Inquiry</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="purpose2" name="purpose" value="reservation">
+                        <label for="purpose2">Reservation Question</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="purpose3" name="purpose" value="suggestion">
+                        <label for="purpose3">Website Suggestion</label>
+                    </div>
                 </fieldset>
 
                 <label for="message">Your message</label>
                 <textarea name="message" id="message" placeholder="Type here..."></textarea>
 
-                <label for="subscribe">I'd like to receive monthly newsletters on the latest rafting
-                    updates!</label>
-                <input type="checkbox" name="subscribe" id="subscribe">
-                <button type="submit">Submit</button>
+                <div class="subscribe">
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    <label for="subscribe">I'd like to receive monthly newsletters on the latest
+                        rafting
+                        updates!</label>
+                </div>
+                <button type="submit" id="submit-btn">Send message</button>
             </form>
         </section>
         <section class="employee">
