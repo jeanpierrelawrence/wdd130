@@ -391,6 +391,7 @@ input[type="checkbox"] {
     padding-block: 2rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    border-radius: 10px;
 
     display: flex;
     align-items: center;
@@ -452,13 +453,14 @@ input[type="checkbox"] {
     align-items: center;
     gap: 2rem;
     grid-template-columns: 1.25fr 0.75fr;
+    padding: 0;
 }
 
 .mini-about figure {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 150px);
-    gap: 10px; 
+    gap: 10px;
 }
 
 .mini-about figure img:nth-child(1) {
@@ -470,6 +472,7 @@ input[type="checkbox"] {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
 }
+
 .mini-about figure img:nth-child(3) {
     grid-column: 2;
     grid-row: 3 / 5;
@@ -479,6 +482,7 @@ input[type="checkbox"] {
     grid-column: 3;
     grid-row: 1 / 2;
 }
+
 .mini-about figure img:nth-child(5) {
     grid-column: 3;
     grid-row: 2 / 5;
@@ -494,10 +498,12 @@ input[type="checkbox"] {
 .mini-about div {
     text-align: center;
 }
+
 .mini-about div h2 {
     font-size: 2rem;
     background-color: transparent;
 }
+
 .mini-about div p {
     line-height: 1.5rem;
     padding-block: 2rem 4rem;
@@ -511,9 +517,161 @@ input[type="checkbox"] {
     border: 2px solid var(--accent-one);
     border-radius: 2px;
     transition: 0.3s ease-in-out;
+    border-radius: 10px;
 }
 
 .mini-about div a:hover {
     color: #5100EB;
     background-color: transparent;
-}   
+}
+
+/* TRIPS */
+
+#contact-btn-trips {
+    position: sticky;
+    top: 90%;
+    left: 90%;
+
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 5rem;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    transition: 0.2s ease-in-out;
+}
+
+#contact-btn-trips:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.featured-trips h1 {
+    width: 100%;
+    height: auto;
+    background: var(--accent-two);
+    color: var(--primary-color);
+    padding-block: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.featured-trips .trip-container {
+    padding-block: 2rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 15px;
+}
+
+.featured-trips .trip-container article:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.featured-trips .trip-container article:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / 2;
+}
+
+.featured-trips .trip-container article:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2 / 3;
+}
+
+.featured-trips .trip-container article {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.featured-trips .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featured-trips .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.featured-trips article:nth-child(1) .content h2 {
+    margin-bottom: auto;
+}
+
+.featured-trips .pill-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.featured-trips .pill-container mark {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    font-size: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.featured-trips .content h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: auto;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    background-color: transparent;
+    text-align: left;
+}
+
+.featured-trips .content p {
+    padding: 1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--secondary-color);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+}
+
+.all-trips {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.all-trips table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 2px;
+}
+
+.all-trips table thead tr th {
+    height: 2.5rem;
+    background: var(--accent-one);
+    color: var(--secondary-color);
+}
+
+.all-trips table tbody tr {
+    height: 3rem;
+}
+
+.all-trips table tbody tr:nth-child(even) {
+    background: hsl(261, 100%, 90%);
+}
